@@ -1,8 +1,4 @@
-$cell-size: 100px;
-$gap-size: 1px;
-$padding-size: 10px;
-$col-count: 7;
-$day-count: 31;
+@import "./utils/variables";
 
 * {
   box-sizing: border-box;
@@ -39,6 +35,7 @@ body {
     }
 
     @for $index from 28 through $day-count {
+      .calendar--month-length--#{$index}
       &:nth-child(n + #{$index + 1}) {
         display: none;
       }
